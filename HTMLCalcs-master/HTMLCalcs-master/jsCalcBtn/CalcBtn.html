@@ -1,0 +1,140 @@
+
+<input type="txt" id ="resTxt"/><p>
+<input type="button" id ="btn1" value ="1" onclick="f1()"/>
+<input type="button" id ="btn2" value ="2" onclick="f2()"/>
+<input type="button" id ="btn3" value ="3" onclick="f3()"/><p>
+<input type="button" id ="btn4" value ="4" onclick="f4()"/>
+<input type="button" id ="btn5" value ="5" onclick="f5()"/>
+<input type="button" id ="btn6" value ="6" onclick="f6()"/><p>
+<input type="button" id ="btn7" value ="7" onclick="f7()"/>
+<input type="button" id ="btn8" value ="8" onclick="f8()"/>
+<input type="button" id ="btn9" value ="9" onclick="f9()"/><p>
+<input type="button" id ="btn0" value ="0" onclick="f0()"/><p>
+<input type="button" id ="btnPlus" value ="+" onclick="fPlus()"/>
+<input type="button" id ="btnMinus" value ="-" onclick="fMinus()"/>
+<input type="button" id ="btnDiv" value ="/" onclick="fDiv()"/>
+<input type="button" id ="btnMult" value ="*" onclick="fMult()"/><p>
+<input type="button" id ="btnEq" value ="=" onclick="fEq()"/>
+<input type="button" id ="btnC" value ="C" onclick="fClr()"/>
+
+
+
+
+<script>
+var aNum = 0;
+var bNum = 0;
+var oPer = '0';
+
+function f1()
+{
+	resTxt.value = resTxt.value + btn1.value;
+}
+
+function f2()
+{
+	resTxt.value = resTxt.value + btn2.value;
+}
+
+function f3()
+{
+	resTxt.value = resTxt.value + btn3.value;
+}
+
+function f4()
+{
+	resTxt.value = resTxt.value + btn4.value;
+}
+
+function f5()
+{
+	resTxt.value = resTxt.value + btn5.value;
+}
+
+function f6()
+{
+	resTxt.value = resTxt.value + btn6.value;
+}
+
+function f7()
+{
+	resTxt.value = resTxt.value + btn7.value;
+}
+
+function f8()
+{
+	resTxt.value = resTxt.value + btn8.value;
+}
+
+function f9()
+{
+	resTxt.value = resTxt.value + btn9.value;
+}
+
+function f0()
+{
+	resTxt.value = resTxt.value + btn0.value;
+}
+
+function fPlus()
+{
+	aNum = parseInt(resTxt.value);
+	oPer = '+';
+	resTxt.value = " ";
+	
+}
+
+function fMinus()
+{
+	aNum = parseInt(resTxt.value);
+	oPer = '-';
+	resTxt.value = " ";
+	
+}
+
+function fDiv()
+{
+	aNum = parseInt(resTxt.value);
+	oPer = '/';
+	resTxt.value = " ";
+	
+}
+
+function fMult()
+{
+	aNum = parseInt(resTxt.value);
+	oPer = '*';
+	resTxt.value = " ";
+	
+}
+
+function fEq()
+{
+	bNum = parseInt(resTxt.value);
+	var res = calc(aNum, bNum, oPer);
+	resTxt.value = res;
+	
+}
+
+function fClr()
+{
+	aNum = 0;
+	bNum = 0;
+	oPer = '0';
+	resTxt.value = "";
+	
+}
+
+function calc (a, b, op)
+{
+	var res = 0;
+	if(op == '+')
+		res = a + b;
+	if(op == '-')
+		res = a-b;
+	if(op == '*')
+		res = a*b;
+	if(op == '/')
+		res = a/b;
+	return res;		
+}
+</script>
